@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нормування технологічних процесів — Навчальний портал</title>
+    <style>
+        /* Базові інженерні стилі сайту */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #111827;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        nav li {
+            margin: 0;
+        }
+        .nav-link {
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover, .nav-link.active-btn {
+            background-color: #2563eb;
+            color: white;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            min-height: 70vh;
+        }
+        .section {
+            display: none; /* Ховаємо всі сторінки за замовчуванням */
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .section.active {
+            display: block; /* Показуємо тільки активну сторінку */
+        }
+        h1 { color: #1e3a8a; margin-top: 0; }
+        
+        /* Стилі для адаптивної сітки карток (стелажа) */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1rem;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            text-align: center;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #1d4ed8; }
+        .btn-presentation { background-color: #10b981; } /* Зелена для презентацій */
+        .btn-presentation:hover { background-color: #059669; }
+        .btn-test { background-color: #7c3aed; } /* Фіолетова для тестів */
+        .btn-test:hover { background-color: #6d28d9; }
+        
+        footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="background-color: #1e3a8a; color: white; padding: 2rem 1.5rem; text-align: center;">
+        <h2 style="margin: 0; font-size: 1.2rem; font-weight: normal; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px;">Навчальний портал з дисципліни</h2>
+        <h1 style="margin: 0.5rem 0 0 0; font-size: 2.2rem; color: white;">«Нормування технологічних процесів»</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a class="nav-link active-btn" data-target="home">Головна</a></li>
+            <li><a class="nav-link" data-target="syllabus">Сілабус</a></li>
+            <li><a class="nav-link" data-target="program">Робоча програма</a></li>
+            <li><a class="nav-link" data-target="presentations">Презентації</a></li>
+            <li><a class="nav-link" data-target="lectures">Лекції</a></li>
+            <li><a class="nav-link" data-target="practical">Практичні роботи</a></li>
+            <li><a class="nav-link" data-target="control">Контроль</a></li>
+        </ul>
+    </nav>
+
+    <main>
+   <!-- Сторінка: Головна (перша при відкритті сайту) -->
+        <div id="home" class="section active">
+            <h1>Вітаємо на навчальному порталі!</h1>
+            <p>Цей вебресурс створено для інформаційного та методичного забезпечення студентів під час вивчення дисципліни «Нормування технологічних процесів».</p>
+            
+            <!-- Великий тематичний малюнок (світлина з робочим посиланням) -->
+            <img src="https://unsplash.com" alt="Технологічний процес та автоматизація" class="img-fluid" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 0.5rem; margin: 1.5rem 0;">
+            
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #4b5563;">Нормування технологічних процесів є фундаментальною основою сучасного виробництва. Воно визначає оптимальні витрати часу та матеріальних ресурсів на виконання окремих операцій, забезпечує високу ефективність підприємства, дозволяє розраховувати собівартість продукції та правильно організовувати роботу технічного персоналу.</p>
+        </div> <!-- ТЕГ ЗАКРИВАЄ ГОЛОВНУ СТОРІНКУ -->
+
+        <!-- Сторінка 1: Сілабус (Окрема секція без active!) -->
+        <div id="syllabus" class="section">
+            <h1>Сілабус дисципліни</h1>
+            <p>Ознайомтеся з нормативним документом навчальної дисципліни:</p>
+            
+            <div class="cards-grid">
+                
+                <!-- Картка: Сілабус -->
+                <div class="card">
+                    <h3>Офіційний сілабус курсу</h3>
+                    <p>Програма дисципліни, теми лекцій, розподіл годин та критерії оцінювання знань студентів.</p>
+                    <a href="https://google.com" target="_blank" rel="noopener noreferrer" class="btn">📄 Відкрити сілабус</a>
+                </div>
+
+            </div> <!-- Закриваємо сітку cards-grid -->
+        </div> <!-- ТЕГ ЗАКРИВАЄ СЕКЦІЮ СІЛАБУСУ -->
+        <!-- Сторінка 2: Робоча програма -->
+        <div id="program" class="section">
+            <h1>Робоча програма</h1>
+            <p>Робоча програма вивчення навчальної дисципліни:</p>
+            <div class="cards-grid">
+                <!-- Сюди додамо картку робочої програми -->
+            </div>
+        </div>
+
+        <!-- Сторінка 3: Презентації -->
+        <div id="presentations" class="section">
+            <h1>Мультимедійні презентації</h1>
+            <p>Візуальні матеріали до лекційних занять:</p>
+            <div class="cards-grid">
+                <!-- Сюди додамо картки презентацій -->
+            </div>
+        </div>
+
+        <!-- Сторінка 4: Лекції -->
+        <div id="lectures" class="section">
+            <h1>Курс лекцій</h1>
+            <p>Теоретичний матеріал для вивчення дисципліни:</p>
+            <div class="cards-grid">
+                <!-- Сюди додамо картки лекцій -->
+            </div>
+        </div>
+
+        <!-- Сторінка 5: Практичні роботи -->
+        <div id="practical" class="section">
+            <h1>Практичні роботи</h1>
+            <p>Інструкції, методичні вказівки та бланки звітів:</p>
+            <div class="cards-grid">
+                <!-- Сюди додамо картки практичних робіт -->
+            </div>
+        </div>
+
+        <!-- Сторінка 6: Контроль -->
+        <div id="control" class="section">
+            <h1>Контроль знань</h1>
+            <p>Тематичні контрольні тести на платформі Microsoft Forms:</p>
+            <div class="cards-grid">
+                <!-- Сюди додамо картки тестів контролю знань -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Навчальний портал з дисципліни «Нормування технологічних процесів».</p>
+        <p>Автор: Фрімерштейн Григорій, викладач-методист вищої категорії Хмельницького політехнічного фахового коледжу Національного університету "Львівська політехніка".</p>
+    </footer>
+
+    <script>
+        // Скрипт логіки безглючного перемикання сторінок
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Керування активною кнопкою в меню
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active-btn'));
+                this.classList.add('active-btn');
+                
+                // Перемикання видимих секцій
+                const targetId = this.getAttribute('data-target');
+                document.querySelectorAll('.section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
