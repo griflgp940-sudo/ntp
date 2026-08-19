@@ -331,13 +331,91 @@
             </div>
         </div>
 
-        <!-- Сторінка 5: Практичні роботи -->
+       <!-- Сторінка 5: Практичні роботи (Головне меню розділу) -->
         <div id="practical" class="section">
             <h1>Практичні роботи</h1>
-            <p>Інструкції, методичні вказівки та бланки звітів:</p>
+            <p>Оберіть категорію матеріалів для виконання практичних занять з дисципліни:</p>
+            
             <div class="cards-grid">
-                <!-- Сюди додамо картки практичних робіт -->
+
+                <!-- Картка 1: Інструкції -->
+                <div class="card">
+                    <h3>Інструкції до робіт</h3>
+                    <p>Методичні вказівки, алгоритми та приклади виконання практичних робіт.</p>
+                    <a href="#" class="nav-link btn" data-target="practical-instructions">📂 Відкрити інструкції</a>
+                </div>
+
+                <!-- Картка 2: Бланки звітів -->
+                <div class="card">
+                    <h3>Бланки звітів</h3>
+                    <p>Чисті бланки та шаблони звітів у форматі документів для завантаження та заповнення.</p>
+                    <a href="#" class="nav-link btn" data-target="practical-blanks">📂 Відкрити бланки звітів</a>
+                </div>
+
+                <!-- Картка 3: Завдання -->
+                <div class="card">
+                    <h3>Завдання</h3>
+                    <p>Картки завдань, індивідуальні варіанти та вихідні дані для розрахунків.</p>
+                    <a href="#" class="nav-link btn" data-target="practical-tasks">📂 Відкрити завдання</a>
+                </div>
+
+            </div> <!-- Закриваємо сітку cards-grid головного меню практичних -->
+        </div> <!-- Закриваємо секцію id="practical" -->
+
+
+        <!-- Внутрішня сторінка: Інструкції до робіт -->
+        <div id="practical-instructions" class="section">
+            <h1>Інструкції до практичних робіт</h1>
+            <p>Методичні вказівки для виконання занять за темами курсу:</p>
+            
+            <div class="cards-grid">
+                 <!-- Картка: Інструкція ПР1 -->
+                <div class="card">
+                    <h3>Інструкція до ПР №1</h3>
+                    <p>Методичні вказівки, покроковий алгоритм виконання та теоретичні відомості до практичної роботи №1.</p>
+                    <a href="https://docs.google.com/document/d/1Hj3_ATXjazTQIL1DGQCvFlh0ewqzWm1t/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">📄 Відкрити інструкцію</a>
+                </div>
             </div>
+            
+            <!-- Кнопка повернення назад до вибору категорій -->
+            <a href="#" class="nav-link btn" data-target="practical" style="background-color: #6b7280; margin-top: 2rem; display: inline-block; width: auto; padding: 0.75rem 1.5rem;">⬅️ Повернутися до меню практичних</a>
+        </div>
+
+
+        <!-- Внутрішня сторінка: Бланки звітів -->
+        <div id="practical-blanks" class="section">
+            <h1>Бланки звітів з практичних робіт</h1>
+            <p>Шаблони та файли звітів для завантаження студентів:</p>
+            
+            <div class="cards-grid">
+                 <!-- Картка: Бланк ПР1 -->
+                <div class="card">
+                    <h3>Бланк звіту до ПР №1</h3>
+                    <p>Шаблон звіту у форматі документа для завантаження, оформлення розрахунків та заповнення результатів ПР №1.</p>
+                    <a href="https://docs.google.com/document/d/1Prz-sw9r6fu2uX_CS-AreBGHUXlI-pR-/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">📄 Відкрити бланк звіту</a>
+                </div>  </div>
+            
+            <!-- Кнопка повернення назад до вибору категорій -->
+            <a href="#" class="nav-link btn" data-target="practical" style="background-color: #6b7280; margin-top: 2rem; display: inline-block; width: auto; padding: 0.75rem 1.5rem;">⬅️ Повернутися до меню практичних</a>
+        </div>
+
+
+        <!-- Внутрішня сторінка: Завдання -->
+        <div id="practical-tasks" class="section">
+            <h1>Індивідуальні завдання та варіанти</h1>
+            <p>Вихідні дані та варіанти для самостійного виконання робіт:</p>
+            
+            <div class="cards-grid">
+                <!-- Картка: Завдання ПР1 -->
+                <div class="card">
+                    <h3>Завдання до ПР №1</h3>
+                    <p>Індивідуальні варіанти, вихідні дані та розрахункові картки для самостійного виконання роботи №1.</p>
+                    <a href="https://docs.google.com/document/d/1jzZjj9ECmE0MAKsJ2ehGUPpW5SW0jQyK/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">📄 Відкрити завдання</a>
+                </div>
+            </div>
+            
+            <!-- Кнопка повернення назад до вибору категорій -->
+            <a href="#" class="nav-link btn" data-target="practical" style="background-color: #6b7280; margin-top: 2rem; display: inline-block; width: auto; padding: 0.75rem 1.5rem;">⬅️ Повернутися до меню практичних</a>
         </div>
 
         <!-- Сторінка 6: Контроль -->
@@ -345,8 +423,19 @@
             <h1>Контроль знань</h1>
             <p>Тематичні контрольні тести на платформі Microsoft Forms:</p>
             <div class="cards-grid">
-                <!-- Сюди додамо картки тестів контролю знань -->
-            </div>
+<!-- Картка: Тест 1 (Оновлене посилання) -->
+                <div class="card">
+                    <h3>Тест №1 (за матеріалами лекцій №1–№5)</h3>
+                    <p>Комплексне онлайн-тестування для перевірки знань студентів за темами перших п'яти лекцій курсу на платформі Microsoft Forms.</p>
+                    <a href="https://forms.cloud.microsoft/e/Dz2uJU9Hx6" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #5c2d91;">📝 Пройти тест</a>
+                </div>
+<!-- Картка: Тест 2 (Лекції 6-10) -->
+                <div class="card">
+                    <h3>Тест №2 (за матеріалами лекцій №6–№10)</h3>
+                    <p>Комплексне онлайн-тестування для перевірки знань студентів за темами лекцій з шостої по десяту на платформі Microsoft Forms.</p>
+                    <a href="https://forms.cloud.microsoft/e/xCE1grKwER" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #5c2d91;">📝 Пройти тест</a>
+                </div>
+</div>
         </div>
     </main>
 
